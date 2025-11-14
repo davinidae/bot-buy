@@ -1,3 +1,4 @@
+.env
 .puppeteer-session/
 node_modules/
 dist/
