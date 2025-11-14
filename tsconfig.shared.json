@@ -1,0 +1,37 @@
+{
+  "compilerOptions": {
+    // "incremental": true,
+    "lib": ["es2021", "dom"],
+    "target": "es2021",
+    "types": ["node"],
+    "pretty": true,
+    "removeComments": false,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "outDir": "dist",
+    "strict": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "rootDir": ".",
+    "checkJs": false,
+    "downlevelIteration": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
+    "noEmit": false,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "noImplicitOverride": true,
+    "noUnusedLocals": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+    "strictFunctionTypes": true,
+    "noUnusedParameters": true,
+    "strictNullChecks": true,
+    // "declaration": true,
+    // "composite": true,
+    "skipLibCheck": true
+    // "forceConsistentCasingInFileNames": true,
+    // "preserveConstEnums": true
+  }
+}

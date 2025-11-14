@@ -1,0 +1,10 @@
+{
+  "extends": "./tsconfig.shared.json",
+  "include": ["**/*.ts", "**/*.spec.ts", "**/*.d.ts", "**/*.json"],
+  "exclude": ["node_modules", "dist"],
+  "compilerOptions": {
+    "rootDir": ".",
+    "moduleResolution": "bundler",
+    "module": "esnext"
+  }
+}

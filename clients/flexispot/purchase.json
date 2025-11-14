@@ -1,0 +1,119 @@
+{
+  "name": "Purchase Process",
+  "description": "Steps to complete a purchase",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": ""
+    },
+    {
+      "action": "click",
+      "selector": "button.ant-btn-primary.footer-submit-btn"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "fill",
+      "selector": "div.promotion-code-section-wrap input[type='text']",
+      "text": "{{DISCOUNT_CODE}}"
+    },
+    {
+      "action": "click",
+      "selector": "div.promotion-code-section-top-btn"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "fill",
+      "selector": "div.tel-input-container input[type='text']",
+      "text": "{{PHONE_NUMBER}}"
+    },
+    {
+      "action": "click",
+      "selector": "button.ant-btn-default.btn.order-summary-bottom-payment"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "fill",
+      "selector": "xpath=//form[contains(@class,'comp-create-address-form')]//span[normalize-space()='Nombre']/following-sibling::input",
+      "text": "{{FIRST_NAME}}"
+    },
+    {
+      "action": "fill",
+      "selector": "xpath=//form[contains(@class,'comp-create-address-form')]//span[normalize-space()='Apellido']/following-sibling::input",
+      "text": "{{LAST_NAME}}"
+    },
+    {
+      "action": "fill",
+      "selector": "#rc_select_3",
+      "text": "{{STREET_ADDRESS}}"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "click",
+      "selector": "xpath=(//div[contains(@class,'ant-select-item-option')][not(contains(@class,'disabled'))])[1]",
+      "optional": true
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "fill",
+      "selector": "xpath=//span[normalize-space()='¿Como te enteraste sobre nosotros?']/following-sibling::input",
+      "text": "{{DISCOVERY_SOURCE}}"
+    },
+    {
+      "action": "click",
+      "selector": "xpath=//div[contains(@class,'common-privacy-polcy-checkbox')]//label[contains(@class,'ant-checkbox-wrapper')]"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "click",
+      "selector": "xpath=//button[contains(@class,'order-summary-bottom-payment') and .//span[normalize-space()='Siguiente']]|//button[contains(@class,'order-summary-bottom-payment')][span[normalize-space()='Siguiente']]|button.ant-btn-default.btn.order-summary-bottom-payment",
+      "optional": true
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "click",
+      "selector": "xpath=//div[contains(@class,'ant-collapse-header')][contains(.,'PayPal')]"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "verify",
+      "expectedText": "PayPal"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    },
+    {
+      "action": "click",
+      "selector": "xpath=//button[contains(@class,'ant-btn') and (contains(.,'Pagar') or contains(.,'Realizar pedido'))]",
+      "optional": true
+    },
+    {
+      "action": "verify",
+      "expectedText": "Pedido confirmado"
+    }
+  ]
+}

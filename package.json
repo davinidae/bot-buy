@@ -1,0 +1,44 @@
+{
+  "name": "checkout-bot",
+  "version": "1.0.0",
+  "description": "A bot to by products",
+  "main": "src/index.ts",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node22 --outfile=dist/index.js --format=cjs --tsconfig=tsconfig.build.json --allow-overwrite",
+    "eslint": "eslint .",
+    "start": "node dist/main/index.js",
+    "format": "prettier . --write",
+    "check": "npm run format && npm run eslint && npm run build",
+    "docs": "typedoc"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.22.0",
+    "@typescript-eslint/eslint-plugin": "^8.26.1",
+    "@typescript-eslint/parser": "^8.26.1",
+    "cross-env": "^7.0.3",
+    "@types/dotenv": "^8.2.0",
+    "esbuild": "^0.25.8",
+    "@types/node": "^22",
+    "dotenv": "^16.4.5",
+    "eslint-plugin-jest": "^28.11.0",
+    "eslint-plugin-prettier": "^5.2.3",
+    "lint-staged": "^15.5.0",
+    "husky": "^9.1.4",
+    "eslint": "^9.39.1",
+    "prettier": "^3.6.2",
+    "ts-node": "^10.9.2",
+    "puppeteer": "^24.15.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "tsx": "^4.19.0",
+    "typedoc": "^0.28.14",
+    "typescript": "^5.5.4",
+    "typescript-eslint": "^8.26.1",
+    "typedoc-plugin-markdown": "^4.9.0"
+  },
+  "lint-staged": {
+    "**/*": "npm run check"
+  }
+}

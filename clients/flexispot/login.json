@@ -1,0 +1,32 @@
+{
+  "name": "Login Process",
+  "description": "Steps to login to website",
+  "steps": [
+    {
+      "action": "navigate",
+      "url": ""
+    },
+    {
+      "action": "accept-cookies",
+      "optional": true
+    },
+    {
+      "action": "fill",
+      "selector": "input[type='text'][autocomplete='off']",
+      "text": "{{EMAIL}}"
+    },
+    {
+      "action": "fill",
+      "selector": "input[type='password'][autocomplete='new-password']",
+      "text": "{{PASSWORD}}"
+    },
+    {
+      "action": "click",
+      "selector": "button.login-button"
+    },
+    {
+      "action": "wait",
+      "timeout": 500
+    }
+  ]
+}
